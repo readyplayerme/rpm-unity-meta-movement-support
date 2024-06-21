@@ -1,0 +1,27 @@
+{
+  "name": "com.readyplayerme.metamovement",
+  "version": "0.1.0",
+  "displayName": "Ready Player Me Meta Movement Support",
+  "description": "This package provides support for Ready Player Me avatars that use Meta Movement SDK.",
+  "unity": "2021.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/readyplayerme/rpm-unity-meta-movement-support/main/README.md",
+  "changelogUrl": "https://github.com/readyplayerme/rpm-unity-meta-movement-support/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/readyplayerme/rpm-unity-meta-movement-support/blob/main/LICENSE.md",
+  "dependencies": {
+  },
+  "keywords": [
+    "meta",
+    "avatar",
+    "vr"
+  ],
+  "author": {
+    "name": "Ready Player Me",
+    "email": "info@readyplayer.me",
+    "url": "https://readyplayer.me"
+  },
+  "samples": [
+    {
+    }
+  ]
+}

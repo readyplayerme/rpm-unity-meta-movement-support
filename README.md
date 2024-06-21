@@ -9,9 +9,19 @@ Please visit the online documentation and join our public `forums` community.
 
 :octocat: **[GitHub Discussions]( https://github.com/readyplayerme/rpm-unity-sdk-core/discussions )**
 
-## Quick Start
-The installation steps can be found [here.](QuickStart.md)
+## Requirements
+- Unity Version 2021.3 or higher
+- [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core) - v6.3.2+
+- [glTFast](https://github.com/atteneder/glTFast) - v5.0.0+ (included as dependency in Ready Player Me Core)
+- [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git#dev) v5.1.0+
 
-### Supported Platforms
-- Windows Standalone (via Quest Link)
-- Android*
+## Installation
+- Copy the following GitHub URL: 
+```cs 
+https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
+```
+- Open Unity and go to `Window` -> `Package Manager` -> `Add package from git URL`
+- Paste the URL and click `Add`
+
+## Testing the Sample 
+### Retargeting Sample

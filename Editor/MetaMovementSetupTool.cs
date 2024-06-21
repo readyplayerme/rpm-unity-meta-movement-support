@@ -53,24 +53,25 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             }
         }
 
-        [MenuItem("GameObject/Ready Player Me/Meta Movement/ Setup Twist Bones")]
-        private static void MetaTwistBoneSetup()
-        {
-            var activeGameObject = Selection.activeGameObject;
-
-            if (activeGameObject != null)
-            {
-                var twistboneComponent = activeGameObject.GetComponent<HierarchyTwist>();
-                if (twistboneComponent == null)
-                {
-                    twistboneComponent = activeGameObject.AddComponent<HierarchyTwist>();
-                }
-                //Todo add twist bone setup after editing HierarchyTwist.cs
-            }
-            else
-            {
-                Debug.LogWarning("No GameObject selected. Please select a GameObject to add components to.");
-            }
-        }
+        //Todo add twist bone setup after editing HierarchyTwist.cs
+        // [MenuItem("GameObject/Ready Player Me/Meta Movement/ Setup Twist Bones")]
+        // private static void MetaTwistBoneSetup()
+        // {
+        //     var activeGameObject = Selection.activeGameObject;
+        //
+        //     if (activeGameObject != null)
+        //     {
+        //         var twistboneComponent = activeGameObject.GetComponent<HierarchyTwist>();
+        //         if (twistboneComponent == null)
+        //         {
+        //             twistboneComponent = activeGameObject.AddComponent<HierarchyTwist>();
+        //         }
+        //         //Todo add twist bone setup after editing HierarchyTwist.cs
+        //     }
+        //     else
+        //     {
+        //         Debug.LogWarning("No GameObject selected. Please select a GameObject to add components to.");
+        //     }
+        // }
     }
 }

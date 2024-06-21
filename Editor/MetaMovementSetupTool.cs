@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using System.Linq;
-using Oculus.Movement.Experimental;
 using Oculus.Movement.Tracking;
 using ReadyPlayerMe.Core;
 using UnityEditor;
@@ -10,7 +10,8 @@ namespace ReadyPlayerMe.MetaMovement.Editor
     public static class MetaMovementSetupTool
     {
         private static readonly string[] BlendshapeMeshNames = { "EyeLeft", "EyeRight", "Head", "Teeth", "Beard", "Avatar" };
-
+        private static readonly string[] TwistBoneNames = { "Armature/Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftArmTwist", "Armature/Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftArmTwist/LeftForeArm/LeftForeArmTwist","Armature/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightArmTwist", "Armature/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightArmTwist/RightForeArm/RightForeArmTwist" };
+        
         [MenuItem("GameObject/Ready Player Me/Meta Movement/Setup FaceTracking")]
         private static void MetaFaceTrackingSetup()
         {
@@ -53,25 +54,34 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             }
         }
 
-        //Todo add twist bone setup after editing HierarchyTwist.cs
-        // [MenuItem("GameObject/Ready Player Me/Meta Movement/ Setup Twist Bones")]
-        // private static void MetaTwistBoneSetup()
-        // {
-        //     var activeGameObject = Selection.activeGameObject;
-        //
-        //     if (activeGameObject != null)
-        //     {
-        //         var twistboneComponent = activeGameObject.GetComponent<HierarchyTwist>();
-        //         if (twistboneComponent == null)
-        //         {
-        //             twistboneComponent = activeGameObject.AddComponent<HierarchyTwist>();
-        //         }
-        //         //Todo add twist bone setup after editing HierarchyTwist.cs
-        //     }
-        //     else
-        //     {
-        //         Debug.LogWarning("No GameObject selected. Please select a GameObject to add components to.");
-        //     }
-        // }
+         [MenuItem("GameObject/Ready Player Me/Meta Movement/Setup Twist Bones")]
+         private static void MetaTwistBoneSetup()
+         {
+             var activeGameObject = Selection.activeGameObject;
+        
+             if (activeGameObject != null)
+             {
+                 var twistboneComponent = activeGameObject.GetComponent<HierarchyTwist>();
+                 if (twistboneComponent == null)
+                 {
+                     twistboneComponent = activeGameObject.AddComponent<HierarchyTwist>();
+                 }
+
+                 var twistBoneList = new List<Transform>();
+                 foreach (var twistBoneName in TwistBoneNames)
+                {
+                    var twistBone = activeGameObject.transform.Find(twistBoneName);
+                    if (twistBone != null)
+                    {
+                        twistBoneList.Add(twistBone);
+                    }
+                }
+                 twistboneComponent.SetupTwistBones(twistBoneList.ToArray(), 1f);
+             }
+             else
+             {
+                 Debug.LogWarning("No GameObject selected. Please select a GameObject to add components to.");
+             }
+         }
     }
 }

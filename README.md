@@ -72,13 +72,10 @@ To do this follow these steps:
    - It will create a Rig as a child of the root object
    - Adds contraints including Full Body Deformation Constraint and a Retargeting constraint
 
-### Step 4: Twist bones set up
-1. Add a HierarchyTwist component onto the avatar GameObject 
-2. Assign the bones and values as shown in the image below
-
-### Step 5: Avatar Face Tracking set up
+### Step 4: Avatar Face Tracking set up & twist bones
 1. Select the avatar GameObject and right click to display the context menu
-2. In the context menu, select `Ready Player Me` -> `Meta Movement` -> `Setup FaceTracking`
+2. In the context menu, select `Ready Player Me` -> `Meta Movement` -> `Setup`
 3. This should automatically set up the avatar with correct settings and components including:
    - A OVRFaceExpressions component added to the root object
    - ARKitFace component added to each child mesh with Blendshapes
+   - A TwistHierarchy component added to the root object with the twist bones set up already

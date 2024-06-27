@@ -57,7 +57,7 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                 {
                     arkitFaceComponent = mesh.gameObject.AddComponent<ARKitFace>();
                 }
-
+                arkitFaceComponent.OnBeforeSerialize();
                 arkitFaceComponent.AutoMapBlendshapes();
                 arkitFaceComponent.BlendShapeStrengthMultiplier = 1;
             }
@@ -80,7 +80,7 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                     twistBoneList.Add(twistBone);
                 }
             }
-            twistboneComponent.SetupTwistBones(twistBoneList.ToArray(), 1f);
+            twistboneComponent.SetupTwistBones(twistBoneList.ToArray(), 0.5f, 0f);
         }
         
         private static void SetLayerRecursively(GameObject targetObject, int newLayer)

@@ -1,8 +1,10 @@
-using System.Collections.Generic;
-using System.Linq;
+using Oculus.Movement.AnimationRigging;
 using Oculus.Movement.Tracking;
+using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
+using ReadyPlayerMe.MetaMovement.Runtime;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace ReadyPlayerMe.MetaMovement.Editor
@@ -10,8 +12,6 @@ namespace ReadyPlayerMe.MetaMovement.Editor
     public static class MetaMovementSetupTool
     {
         private const string META_CHARACTER_LAYER = "Character";
-        private static readonly string[] BlendshapeMeshNames = { "EyeLeft", "EyeRight", "Head", "Teeth", "Beard", "Avatar" };
-        private static readonly string[] TwistBoneNames = { "Armature/Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftArmTwist", "Armature/Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftArmTwist/LeftForeArm/LeftForeArmTwist","Armature/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightArmTwist", "Armature/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightArmTwist/RightForeArm/RightForeArmTwist" };
 
         [MenuItem("GameObject/Ready Player Me/Meta Movement/Run Avatar Setup")]
         private static void MetaMovementSetup()
@@ -21,9 +21,13 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             if (activeGameObject != null)
             {
                 //TODO Add Retargeting Layer setup once meta makes it publicly accessible
-                SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
+                MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
                 SetupFaceTracking(activeGameObject);
-                SetupHierarchyTwist(activeGameObject);
+                MetaMovementHelper.SetupHierarchyTwist(activeGameObject);
+                var deformation = activeGameObject.GetComponentInChildren<FullBodyDeformationConstraint>();
+                MetaMovementHelper.ApplyDeformationSettings(deformation);
+                MetaMovementHelper.ApplyRetargetingSettings(activeGameObject);
+                EditorSceneManager.MarkSceneDirty(activeGameObject.scene);
             }
             else
             {
@@ -36,14 +40,13 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             var ovrFaceExpression = activeGameObject.GetComponent<OVRFaceExpressions>();
             if (ovrFaceExpression == null)
             {
-                ovrFaceExpression = activeGameObject.AddComponent<OVRFaceExpressions>();
+                activeGameObject.AddComponent<OVRFaceExpressions>();
             }
 
             var skeletalMeshes = AvatarMeshHelper.GetHeadMeshes(activeGameObject);
             foreach (var mesh in skeletalMeshes)
             {
                 var skinMeshRenderer = mesh.GetComponent<SkinnedMeshRenderer>();
-                if (!BlendshapeMeshNames.Any(mesh.name.Contains)) continue;
                 if (skinMeshRenderer == null || skinMeshRenderer.sharedMesh == null ||
                     skinMeshRenderer.sharedMesh.blendShapeCount == 0)
                 {
@@ -60,39 +63,7 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                 arkitFaceComponent.OnBeforeSerialize();
                 arkitFaceComponent.AutoMapBlendshapes();
                 arkitFaceComponent.BlendShapeStrengthMultiplier = 1;
-            }
-        }
-
-        private static void SetupHierarchyTwist(GameObject activeGameObject)
-        {
-            var twistboneComponent = activeGameObject.GetComponent<HierarchyTwist>();
-            if (twistboneComponent == null)
-            {
-                twistboneComponent = activeGameObject.AddComponent<HierarchyTwist>();
-            }
-
-            var twistBoneList = new List<Transform>();
-            foreach (var twistBoneName in TwistBoneNames)
-            {
-                var twistBone = activeGameObject.transform.Find(twistBoneName);
-                if (twistBone != null)
-                {
-                    twistBoneList.Add(twistBone);
-                }
-            }
-            twistboneComponent.SetupTwistBones(twistBoneList.ToArray(), 0.5f, 0f);
-        }
-        
-        private static void SetLayerRecursively(GameObject targetObject, int newLayer)
-        {
-            if (targetObject == null) return;
-
-            targetObject.layer = newLayer;
-
-            foreach (Transform child in targetObject.transform)
-            {
-                if (child == null) continue;
-                SetLayerRecursively(child.gameObject, newLayer);
+                EditorUtility.SetDirty(arkitFaceComponent);
             }
         }
     }

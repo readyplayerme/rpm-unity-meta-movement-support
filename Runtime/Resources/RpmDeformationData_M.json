@@ -1,0 +1,594 @@
+{
+    "m_Weight": 1.0,
+    "m_Data": {
+        "_deformationBodyType": 0,
+        "_spineLowerAlignmentWeight": 0.0,
+        "_spineUpperAlignmentWeight": 0.0,
+        "_chestAlignmentWeight": 0.0,
+        "_shouldersHeightReductionWeight": 0.0,
+        "_shouldersWidthReductionWeight": 0.0,
+        "_affectArmsBySpineCorrection": false,
+        "_shoulderRollWeight": 1.0,
+        "_leftShoulderWeight": 1.0,
+        "_rightShoulderWeight": 1.0,
+        "_leftArmWeight": 1.0,
+        "_rightArmWeight": 1.0,
+        "_leftHandWeight": 1.0,
+        "_rightHandWeight": 1.0,
+        "_squashLimit": 2.0,
+        "_stretchLimit": 2.0,
+        "_alignLeftLegWeight": 1.0,
+        "_alignRightLegWeight": 1.0,
+        "_leftToesWeight": 1.0,
+        "_rightToesWeight": 1.0,
+        "_alignFeetWeight": 0.75,
+        "_originalSpinePositionsWeight": 0.75,
+        "_originalSpineBoneCount": 5,
+        "_originalSpineUseHipsToHeadToScale": true,
+        "_originalSpineFixRotations": true,
+        "_spineTranslationCorrectionType": 3,
+        "_customSkeleton": {
+            "instanceID": 0
+        },
+        "_animator": {
+            "instanceID": -43316
+        },
+        "_hipsToHeadBones": [
+            {
+                "instanceID": -43416
+            },
+            {
+                "instanceID": -43420
+            },
+            {
+                "instanceID": -43424
+            },
+            {
+                "instanceID": -43428
+            },
+            {
+                "instanceID": -43556
+            },
+            {
+                "instanceID": -43560
+            }
+        ],
+        "_hipsToHeadBoneTargets": [
+            {
+                "instanceID": -43822
+            },
+            {
+                "instanceID": -43826
+            },
+            {
+                "instanceID": -43830
+            },
+            {
+                "instanceID": -43834
+            },
+            {
+                "instanceID": -43838
+            },
+            {
+                "instanceID": -43842
+            }
+        ],
+        "_feetToToesBoneTargets": [
+            {
+                "instanceID": -43846
+            },
+            {
+                "instanceID": -43850
+            },
+            {
+                "instanceID": -43854
+            },
+            {
+                "instanceID": -43858
+            }
+        ],
+        "_leftArmData": {
+            "ShoulderBone": {
+                "instanceID": -43432
+            },
+            "UpperArmBone": {
+                "instanceID": -43436
+            },
+            "LowerArmBone": {
+                "instanceID": -43444
+            },
+            "HandBone": {
+                "instanceID": -43452
+            },
+            "ShoulderLocalPos": {
+                "x": -0.04713600501418114,
+                "y": 0.14114801585674287,
+                "z": -0.006254991516470909
+            },
+            "ShoulderLocalRot": {
+                "x": 0.4708521068096161,
+                "y": -0.5612514615058899,
+                "z": 0.43453314900398257,
+                "w": 0.5239046216011047
+            },
+            "LowerArmToHandAxis": {
+                "x": 0.006212175823748112,
+                "y": 0.9999599456787109,
+                "z": -0.006450762506574392
+            }
+        },
+        "_rightArmData": {
+            "ShoulderBone": {
+                "instanceID": -43576
+            },
+            "UpperArmBone": {
+                "instanceID": -43580
+            },
+            "LowerArmBone": {
+                "instanceID": -43588
+            },
+            "HandBone": {
+                "instanceID": -43596
+            },
+            "ShoulderLocalPos": {
+                "x": 0.04713599756360054,
+                "y": 0.14114795625209809,
+                "z": -0.0062550026923418049
+            },
+            "ShoulderLocalRot": {
+                "x": 0.47085046768188479,
+                "y": 0.561252772808075,
+                "z": -0.4345308542251587,
+                "w": 0.5239066481590271
+            },
+            "LowerArmToHandAxis": {
+                "x": -0.0062082624062895779,
+                "y": 0.9999599456787109,
+                "z": -0.006445212755352259
+            }
+        },
+        "_leftLegData": {
+            "HipsBone": {
+                "instanceID": -43416
+            },
+            "UpperLegBone": {
+                "instanceID": -43700
+            },
+            "LowerLegBone": {
+                "instanceID": -43704
+            },
+            "FootBone": {
+                "instanceID": -43708
+            },
+            "ToesBone": {
+                "instanceID": -43712
+            },
+            "ToesLocalPos": {
+                "x": 1.7171259969472886e-9,
+                "y": 0.1488439440727234,
+                "z": -4.773028194904327e-9
+            },
+            "FootLocalRot": {
+                "x": 0.5075795650482178,
+                "y": -0.011685709469020367,
+                "z": 0.006884842645376921,
+                "w": 0.8614981174468994
+            }
+        },
+        "_rightLegData": {
+            "HipsBone": {
+                "instanceID": -43416
+            },
+            "UpperLegBone": {
+                "instanceID": -43720
+            },
+            "LowerLegBone": {
+                "instanceID": -43724
+            },
+            "FootBone": {
+                "instanceID": -43728
+            },
+            "ToesBone": {
+                "instanceID": -43732
+            },
+            "ToesLocalPos": {
+                "x": 4.663888830691576e-9,
+                "y": 0.148843914270401,
+                "z": -3.14321368932724e-9
+            },
+            "FootLocalRot": {
+                "x": 0.5075793266296387,
+                "y": 0.011685660108923912,
+                "z": -0.006884975824505091,
+                "w": 0.8614982962608337
+            }
+        },
+        "_bonePairData": [
+            {
+                "StartBone": {
+                    "instanceID": -43416
+                },
+                "EndBone": {
+                    "instanceID": -43420
+                },
+                "Distance": 0.0984729751944542,
+                "HeightProportion": 0.06406108289957047,
+                "LimbProportion": 0.1565573364496231,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -2.437289194252845e-13,
+                    "y": 0.0975436270236969,
+                    "z": 0.013496963307261467
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43420
+                },
+                "EndBone": {
+                    "instanceID": -43424
+                },
+                "Distance": 0.13049694895744325,
+                "HeightProportion": 0.0848941057920456,
+                "LimbProportion": 0.20747067034244538,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -2.2775985542011769e-8,
+                    "y": 0.13022677600383759,
+                    "z": 0.008392833173274994
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43424
+                },
+                "EndBone": {
+                    "instanceID": -43428
+                },
+                "Distance": 0.1218067929148674,
+                "HeightProportion": 0.07924076914787293,
+                "LimbProportion": 0.1936546117067337,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -2.5511091905627837e-8,
+                    "y": 0.12126404047012329,
+                    "z": -0.011486095376312733
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43428
+                },
+                "EndBone": {
+                    "instanceID": -43556
+                },
+                "Distance": 0.1555749475955963,
+                "HeightProportion": 0.10120847076177597,
+                "LimbProportion": 0.24734094738960267,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -2.986772074109467e-8,
+                    "y": 0.1427440494298935,
+                    "z": -0.061868440359830859
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43556
+                },
+                "EndBone": {
+                    "instanceID": -43560
+                },
+                "Distance": 0.12263816595077515,
+                "HeightProportion": 0.07978162169456482,
+                "LimbProportion": 0.19497637450695039,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 7.919577882375961e-8,
+                    "y": 0.11614729464054108,
+                    "z": 0.03936908394098282
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43428
+                },
+                "EndBone": {
+                    "instanceID": -43432
+                },
+                "Distance": 0.14894191920757295,
+                "HeightProportion": 0.09689338505268097,
+                "LimbProportion": 0.23679541051387788,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -0.016213251277804376,
+                    "y": 0.07159893959760666,
+                    "z": -0.12959328293800355
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43428
+                },
+                "EndBone": {
+                    "instanceID": -43576
+                },
+                "Distance": 0.14894184470176698,
+                "HeightProportion": 0.09689334034919739,
+                "LimbProportion": 0.23679529130458833,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 0.016213316470384599,
+                    "y": 0.07159985601902008,
+                    "z": -0.12959270179271699
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43432
+                },
+                "EndBone": {
+                    "instanceID": -43436
+                },
+                "Distance": 0.11889594048261643,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 0.0020981391426175834,
+                    "y": 0.11695648729801178,
+                    "z": -0.021284328773617746
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43576
+                },
+                "EndBone": {
+                    "instanceID": -43580
+                },
+                "Distance": 0.1188959851861,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -0.0021028355695307256,
+                    "y": 0.11695623397827149,
+                    "z": -0.021285586059093477
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43436
+                },
+                "EndBone": {
+                    "instanceID": -43444
+                },
+                "Distance": 0.2851279675960541,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -0.0003637280606199056,
+                    "y": 0.2851276695728302,
+                    "z": 0.00019800954032689333
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43580
+                },
+                "EndBone": {
+                    "instanceID": -43588
+                },
+                "Distance": 0.28512829542160036,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 0.000365974148735404,
+                    "y": 0.28512799739837649,
+                    "z": 0.00019707281899172813
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43444
+                },
+                "EndBone": {
+                    "instanceID": -43452
+                },
+                "Distance": 0.25301283597946169,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -0.022726576775312425,
+                    "y": -0.034128736704587939,
+                    "z": 0.2496682107448578
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43588
+                },
+                "EndBone": {
+                    "instanceID": -43596
+                },
+                "Distance": 0.2530132234096527,
+                "HeightProportion": 0.0,
+                "LimbProportion": 0.0,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 0.02272726222872734,
+                    "y": -0.03412945568561554,
+                    "z": 0.24966853857040406
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43416
+                },
+                "EndBone": {
+                    "instanceID": -43700
+                },
+                "Distance": 0.09554231911897659,
+                "HeightProportion": 0.062154557555913928,
+                "LimbProportion": 0.10520157963037491,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 0.0953364297747612,
+                    "y": -0.0052587492391467098,
+                    "z": -0.003412791760638356
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43416
+                },
+                "EndBone": {
+                    "instanceID": -43720
+                },
+                "Distance": 0.09554203599691391,
+                "HeightProportion": 0.062154371291399,
+                "LimbProportion": 0.10520126670598984,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -0.09533607214689255,
+                    "y": -0.005259712226688862,
+                    "z": -0.0034130827989429237
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43700
+                },
+                "EndBone": {
+                    "instanceID": -43704
+                },
+                "Distance": 0.45817312598228457,
+                "HeightProportion": 0.29806214570999148,
+                "LimbProportion": 0.5044940710067749,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -5.7449319967872728e-8,
+                    "y": 0.45658332109451296,
+                    "z": 0.03813619911670685
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43720
+                },
+                "EndBone": {
+                    "instanceID": -43724
+                },
+                "Distance": 0.4581751227378845,
+                "HeightProportion": 0.2980634272098541,
+                "LimbProportion": 0.5044962763786316,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 5.395553515086249e-8,
+                    "y": 0.45658522844314577,
+                    "z": 0.03813645616173744
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43704
+                },
+                "EndBone": {
+                    "instanceID": -43708
+                },
+                "Distance": 0.4438581168651581,
+                "HeightProportion": 0.2887495756149292,
+                "LimbProportion": 0.48873183131217959,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": -1.4257643954351807e-7,
+                    "y": 0.2151075154542923,
+                    "z": -0.3882509768009186
+                }
+            },
+            {
+                "StartBone": {
+                    "instanceID": -43724
+                },
+                "EndBone": {
+                    "instanceID": -43728
+                },
+                "Distance": 0.44385895133018496,
+                "HeightProportion": 0.2887501120567322,
+                "LimbProportion": 0.4887327551841736,
+                "EndBoneLocalOffsetFromStart": {
+                    "x": 6.576998945462265e-9,
+                    "y": 0.21510812640190125,
+                    "z": -0.38825157284736636
+                }
+            }
+        ],
+        "_boneAdjustmentData": [
+            {
+                "Bone": 0,
+                "Adjustment": {
+                    "x": 0.5000014305114746,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.8660245537757874
+                },
+                "ChildBone1": 7,
+                "ChildBone2": 1,
+                "ChildBone3": 2
+            },
+            {
+                "Bone": 7,
+                "Adjustment": {
+                    "x": 0.10215850174427033,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": -0.9947681427001953
+                },
+                "ChildBone1": 8,
+                "ChildBone2": 55,
+                "ChildBone3": 55
+            },
+            {
+                "Bone": 8,
+                "Adjustment": {
+                    "x": 0.031793929636478427,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.9994944334030151
+                },
+                "ChildBone1": 54,
+                "ChildBone2": 55,
+                "ChildBone3": 55
+            },
+            {
+                "Bone": 54,
+                "Adjustment": {
+                    "x": 0.13803060352802277,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": -0.9904279708862305
+                },
+                "ChildBone1": 9,
+                "ChildBone2": 11,
+                "ChildBone3": 12
+            },
+            {
+                "Bone": 11,
+                "Adjustment": {
+                    "x": 0.11533139646053314,
+                    "y": -0.004500025883316994,
+                    "z": 0.03872799128293991,
+                    "w": 0.9925616383552551
+                },
+                "ChildBone1": 13,
+                "ChildBone2": 55,
+                "ChildBone3": 55
+            },
+            {
+                "Bone": 12,
+                "Adjustment": {
+                    "x": -0.11533160507678986,
+                    "y": -0.004501227289438248,
+                    "z": 0.03873823955655098,
+                    "w": -0.9925611615180969
+                },
+                "ChildBone1": 14,
+                "ChildBone2": 55,
+                "ChildBone3": 55
+            }
+        ],
+        "_startingScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+        },
+        "_hipsToHeadDistance": 0.6289898753166199,
+        "_hipsToFootDistance": 0.9081833362579346
+    }
+}

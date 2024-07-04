@@ -44,9 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d412b88cb7d58be47997f0fa499ffd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarUrl: https://models.readyplayer.me/6683c202649e11cdd6e1e8ad.glb
   parent: {fileID: 0}
   spawnOffset: {x: 0, y: 0, z: 0}
-  restTPoseObject: {fileID: 11400000, guid: 1908bd4d2ee1e1a4ab87e0877b337f3a, type: 2}
+  restTPoseObject_M: {fileID: 11400000, guid: 1908bd4d2ee1e1a4ab87e0877b337f3a, type: 2}
+  restTPoseObject_F: {fileID: 11400000, guid: ea324f64e8bb2fb4ba3f85bc2f611f05, type: 2}
   avatarConfig: {fileID: 11400000, guid: 7b5679ec033af4047870d3ade6d4e8ae, type: 2}
   avatarOverride: {fileID: 0}
+  OnAvatarObjectLoaded:
+    m_PersistentCalls:
+      m_Calls: []

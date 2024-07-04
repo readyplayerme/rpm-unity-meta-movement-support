@@ -11,15 +11,19 @@ namespace ReadyPlayerMe.MetaMovement.Editor
 {
     public static class MetaMovementSetupTool
     {
+        private const string META_SETUP_MENU_FUNCTION = "GameObject/Ready Player Me/Meta Movement/Run Avatar Setup";
         private const string META_CHARACTER_LAYER = "Character";
 
-        [MenuItem("GameObject/Ready Player Me/Meta Movement/Run Avatar Setup")]
+        [MenuItem(META_SETUP_MENU_FUNCTION)]
         private static void MetaMovementSetup()
         {
             var activeGameObject = Selection.activeGameObject;
 
             if (activeGameObject != null)
             {
+                var animator = activeGameObject.GetComponent<Animator>();
+                var restPoseObjectHumanoid = AddComponentsHelper.GetRestPoseObject(AddComponentsHelper.CheckIfTPose(animator));
+                HelperMenusBody.SetupCharacterForAnimationRiggingRetargetingConstraints(activeGameObject, restPoseObjectHumanoid, true, true);
                 //TODO Add Retargeting Layer setup once meta makes it publicly accessible
                 MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
                 SetupFaceTracking(activeGameObject);
@@ -61,8 +65,7 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                     arkitFaceComponent = mesh.gameObject.AddComponent<ARKitFace>();
                 }
                 arkitFaceComponent.OnBeforeSerialize();
-                arkitFaceComponent.AutoMapBlendshapes();
-                arkitFaceComponent.BlendShapeStrengthMultiplier = 1;
+                MetaMovementHelper.ApplyARKitFaceSettings(arkitFaceComponent);
                 EditorUtility.SetDirty(arkitFaceComponent);
             }
         }

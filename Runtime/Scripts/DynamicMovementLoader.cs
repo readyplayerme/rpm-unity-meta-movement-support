@@ -3,14 +3,12 @@ using Oculus.Movement;
 using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ReadyPlayerMe.MetaMovement.Runtime
 {
-    public class AvatarMetaMovementLoader : MonoBehaviour
+    public class DynamicMovementLoader : MonoBehaviour, IAvatarLoadFromUrl
     {
-        [SerializeField]
-        private string avatarUrl = "https://api.readyplayer.me/v1/avatars/66265a785181f3ac31691d35.glb";
-
         /// <summary>
         /// Parent to place game object under.
         /// </summary>
@@ -28,7 +26,14 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
         /// </summary>
         [SerializeField]
         [Tooltip(RetargetingMenuTooltips.RestTPoseObject)]
-        protected RestPoseObjectHumanoid restTPoseObject;
+        protected RestPoseObjectHumanoid restTPoseObject_M;        
+        
+        /// <summary>
+        /// The rest T-pose humanoid object.
+        /// </summary>
+        [SerializeField]
+        [Tooltip(RetargetingMenuTooltips.RestTPoseObject)]
+        protected RestPoseObjectHumanoid restTPoseObject_F;
 
         /// <summary>
         /// The configuration which to load the RPM avatar with. If not set, it will use the settings from the global AvatarLoaderSettings.
@@ -41,17 +46,19 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
         /// </summary>
         [SerializeField, Optional]
         protected Avatar avatarOverride;
-
+        
+        public UnityEvent<GameObject> OnAvatarObjectLoaded;
+        
         private GameObject avatar;
-
-        private void Start()
+        
+        public void LoadAvatar(string url)
         {
             var avatarLoader = new AvatarObjectLoader();
             if (avatarConfig != null)
             {
                 avatarLoader.AvatarConfig = avatarConfig;
             }
-            avatarLoader.LoadAvatar(avatarUrl);
+            avatarLoader.LoadAvatar(url);
             avatarLoader.OnCompleted += AvatarLoaderOnCompleted;
             avatarLoader.OnFailed += AvatarLoaderOnFailed;
         }
@@ -78,7 +85,9 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
             {
                 animatorComp.avatar = avatarOverride;
             }
-            MetaMovementHelper.RuntimeRetargetingSetup(avatar, restTPoseObject);
+            var avatarGender = e.Metadata.OutfitGender == OutfitGender.Masculine ? restTPoseObject_M : restTPoseObject_F;
+            MetaMovementHelper.RuntimeRetargetingSetup(avatar, avatarGender);
+            OnAvatarObjectLoaded?.Invoke(avatar);
         }
 
         private void OnDestroy()

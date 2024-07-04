@@ -30,8 +30,7 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
                 }
                 AddComponentsHelper.SetUpCharacterForARKitFace(headMesh.gameObject, true, true);
                 var arKitFace = headMesh.GetComponent<ARKitFace>();
-                arKitFace.BlendShapeStrengthMultiplier = 1.0f;
-                arKitFace.Mappings[49] = OVRFaceExpressions.FaceExpression.TongueOut;
+                ApplyARKitFaceSettings(arKitFace);
             }
 
             SetLayerRecursively(avatar, 10);
@@ -81,6 +80,14 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
                 SetLayerRecursively(child.gameObject, newLayer);
             }
         }
+
+        public static void ApplyARKitFaceSettings(ARKitFace arKitFace)
+        {
+            arKitFace.AutoMapBlendshapes();
+            arKitFace.BlendShapeStrengthMultiplier = 1f;
+            if(arKitFace.Mappings == null || arKitFace.Mappings.Length < 50) return;
+            arKitFace.Mappings[49] = OVRFaceExpressions.FaceExpression.TongueOut;
+        }
         
         public static void SetupHierarchyTwist(GameObject avatar)
         {
@@ -103,6 +110,29 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
             #if UNITY_EDITOR
             EditorUtility.SetDirty(twistboneComponent);
             #endif
+        }
+
+        public static void UpdateFaceTrackingMeshes(GameObject avatar)
+        {
+            var headMeshes = AvatarMeshHelper.GetHeadMeshes(avatar);
+            foreach (var headMesh in headMeshes)
+            {
+                var skinMeshRenderer = headMesh.GetComponent<SkinnedMeshRenderer>();
+                var arkitFaceComponent = skinMeshRenderer.gameObject.GetComponent<ARKitFace>();
+                if (skinMeshRenderer == null || skinMeshRenderer.sharedMesh == null ||
+                    skinMeshRenderer.sharedMesh.blendShapeCount < 1)
+                {
+                    if (arkitFaceComponent != null)
+                    {
+                        arkitFaceComponent.enabled = false;
+                    }
+                    continue;
+                }
+ 
+                if (arkitFaceComponent != null) continue;
+                arkitFaceComponent = skinMeshRenderer.gameObject.AddComponent<ARKitFace>();
+                ApplyARKitFaceSettings(arkitFaceComponent);
+            }
         }
     }
 }

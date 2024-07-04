@@ -4200,7 +4200,7 @@ GameObject:
   - component: {fileID: 2109619402698660712}
   - component: {fileID: 7076356165442314885}
   m_Layer: 11
-  m_Name: AvatarMirrored
+  m_Name: MirroredAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

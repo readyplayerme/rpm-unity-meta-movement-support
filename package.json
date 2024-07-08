@@ -22,6 +22,9 @@
   },
   "samples": [
     {
+      "displayName": "LoaderSamples",
+      "description": "These samples showcase various ways to load a Ready Player me avatar into a scene with Meta Movement tracking setup.",
+      "path": "Samples~/LoaderSamples"
     }
   ]
 }

@@ -2,7 +2,7 @@ using Oculus.Movement.AnimationRigging;
 using Oculus.Movement.Tracking;
 using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
-using ReadyPlayerMe.MetaMovement.Runtime;
+using ReadyPlayerMe.MetaMovement;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;

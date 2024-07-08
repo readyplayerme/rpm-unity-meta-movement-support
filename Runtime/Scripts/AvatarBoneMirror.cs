@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 
-namespace ReadyPlayerMe.MetaMovement.Runtime
+namespace ReadyPlayerMe.MetaMovement
 {
     public class AvatarBoneMirror : MonoBehaviour
     {

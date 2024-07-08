@@ -1,11 +1,10 @@
-using Oculus.Interaction;
 using Oculus.Movement;
 using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ReadyPlayerMe.MetaMovement.Runtime
+namespace ReadyPlayerMe.MetaMovement
 {
     public class DynamicMovementLoader : MonoBehaviour, IAvatarLoadFromUrl
     {
@@ -38,13 +37,13 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
         /// <summary>
         /// The configuration which to load the RPM avatar with. If not set, it will use the settings from the global AvatarLoaderSettings.
         /// </summary>
-        [SerializeField, Optional]
+        [SerializeField]
         protected AvatarConfig avatarConfig;
 
         /// <summary>
         /// Custom avatar.
         /// </summary>
-        [SerializeField, Optional]
+        [SerializeField]
         protected Avatar avatarOverride;
         
         public UnityEvent<GameObject> OnAvatarObjectLoaded;

@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnityEngine;
 
-public interface IAvatarLoadFromUrl 
+namespace ReadyPlayerMe.MetaMovement
 {
-    public void LoadAvatar(string url);
+    public interface IAvatarLoadFromUrl
+    {
+        public void LoadAvatar(string url);
+    }
 }

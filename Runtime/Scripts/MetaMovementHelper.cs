@@ -6,7 +6,7 @@ using ReadyPlayerMe.Core;
 using UnityEditor;
 using UnityEngine;
 
-namespace ReadyPlayerMe.MetaMovement.Runtime
+namespace ReadyPlayerMe.MetaMovement
 {
     public static class MetaMovementHelper
     {

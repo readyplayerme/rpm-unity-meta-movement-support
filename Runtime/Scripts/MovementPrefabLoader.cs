@@ -1,4 +1,3 @@
-using Oculus.Interaction;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,7 +24,7 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
         /// <summary>
         /// The configuration which to load the RPM avatar with. If not set, it will use the settings from the global AvatarLoaderSettings.
         /// </summary>
-        [SerializeField, Optional]
+        [SerializeField]
         protected AvatarConfig avatarConfig;
 
         public UnityEvent<GameObject> OnAvatarObjectLoaded;

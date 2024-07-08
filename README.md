@@ -14,7 +14,7 @@ Please visit the online documentation and join our public `forums` community.
 - [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core) - v6.3.2+
 - [glTFast](https://github.com/atteneder/glTFast) - v5.0.0+ (included as dependency in Ready Player Me Core)
 - [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git#dev) v5.1.0+
-- Before testing in VR you should Fix any issues diagnosed by the Meta Project Setup Tool by clicking on `Edit` -> ` > Project Settings` -> `Meta XR`
+- Before testing in VR you should Fix any issues diagnosed by the Meta Project Setup Tool by clicking on `Edit -> Project Settings -> Meta XR`
 
 ## Installation
 - Copy the following GitHub URL: 

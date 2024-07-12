@@ -11,13 +11,13 @@ namespace ReadyPlayerMe.MetaMovement
         /// <summary>
         /// Parent to place game object under.
         /// </summary>
-        [SerializeField]
+        [SerializeField, Tooltip("Parent to place game object under. If not set, it will be placed in the root of the scene.")]
         protected Transform parent;
 
         /// <summary>
         /// Spawn position of character.
         /// </summary>
-        [SerializeField]
+        [SerializeField, Tooltip("Spawn position offset of the character relative to the parent.")]
         protected Vector3 spawnOffset;
 
         /// <summary>
@@ -37,14 +37,14 @@ namespace ReadyPlayerMe.MetaMovement
         /// <summary>
         /// The configuration which to load the RPM avatar with. If not set, it will use the settings from the global AvatarLoaderSettings.
         /// </summary>
-        [SerializeField]
+        [SerializeField, Tooltip("The configuration which to load the RPM avatar with. If not set, it will use the settings from the global AvatarLoaderSettings.")]
         protected AvatarConfig avatarConfig;
 
         /// <summary>
         /// Custom avatar.
         /// </summary>
-        [SerializeField]
-        protected Avatar avatarOverride;
+        [SerializeField, Tooltip("If set, the loaded avatar will use this animation avatar instead of the one from the default.")]
+        protected Avatar animationAvatarOverride;
         
         public UnityEvent<GameObject> OnAvatarObjectLoaded;
         
@@ -80,9 +80,9 @@ namespace ReadyPlayerMe.MetaMovement
 
             AvatarAnimationHelper.SetupAnimator(e.Metadata, avatar);
             var animatorComp = avatar.GetComponent<Animator>();
-            if (avatarOverride != null)
+            if (animationAvatarOverride != null)
             {
-                animatorComp.avatar = avatarOverride;
+                animatorComp.avatar = animationAvatarOverride;
             }
             var avatarGender = e.Metadata.OutfitGender == OutfitGender.Masculine ? restTPoseObject_M : restTPoseObject_F;
             MetaMovementHelper.RuntimeRetargetingSetup(avatar, avatarGender);

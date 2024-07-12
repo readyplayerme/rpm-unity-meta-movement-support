@@ -51,6 +51,16 @@ namespace ReadyPlayerMe.MetaMovement
                 Debug.LogError("RetargetingLayer component is missing from the avatar.");
                 return;
             }
+            var leftShoulder = retargetingLayer.GetFindAdjustment(HumanBodyBones.LeftShoulder);
+            var rightShoulder = retargetingLayer.GetFindAdjustment(HumanBodyBones.RightShoulder);
+            if (leftShoulder != null)
+            {
+                leftShoulder.RotationChange = Quaternion.Euler(0, 0, 345f);;
+            }
+            if (rightShoulder != null)
+            {
+                rightShoulder.RotationChange = Quaternion.Euler(0, 0, 15f);
+            }
 
             foreach (var processor in retargetingLayer.RetargetingProcessors)
             {
@@ -66,6 +76,7 @@ namespace ReadyPlayerMe.MetaMovement
             deformation.data.OriginalSpinePositionsWeight = 0.75f;
             deformation.data.SpineLowerAlignmentWeight = 0.0f;
             deformation.data.SpineUpperAlignmentWeight = 0.0f;
+            deformation.data.ShoulderRollWeight = 0.5f;
         }
 
         public static void SetLayerRecursively(GameObject targetObject, int newLayer)

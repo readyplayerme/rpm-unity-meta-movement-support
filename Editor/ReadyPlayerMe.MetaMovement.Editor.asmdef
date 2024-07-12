@@ -4,12 +4,13 @@
     "references": [
         "ReadyPlayerMe.MetaMovement",
         "ReadyPlayerMe.Core",
-        "Meta.Movement"
+        "Meta.Movement",
+        "Oculus.VR"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [
+    "includePlatforms": [
         "Editor"
     ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

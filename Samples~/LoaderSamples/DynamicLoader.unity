@@ -1665,14 +1665,6 @@ PrefabInstance:
       value: DynamicAvatarLoader
       objectReference: {fileID: 0}
     - target: {fileID: 1073724494135847382, guid: 1d79721a4fd8ef84aaeff4838a36829c, type: 3}
-      propertyPath: restTPoseObject_F
-      value: 
-      objectReference: {fileID: 11400000, guid: 1908bd4d2ee1e1a4ab87e0877b337f3a, type: 2}
-    - target: {fileID: 1073724494135847382, guid: 1d79721a4fd8ef84aaeff4838a36829c, type: 3}
-      propertyPath: restTPoseObject_M
-      value: 
-      objectReference: {fileID: 11400000, guid: 1908bd4d2ee1e1a4ab87e0877b337f3a, type: 2}
-    - target: {fileID: 1073724494135847382, guid: 1d79721a4fd8ef84aaeff4838a36829c, type: 3}
       propertyPath: OnAvatarObjectLoaded.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

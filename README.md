@@ -11,12 +11,13 @@ Please visit the online documentation and join our public `forums` community.
 
 ## Requirements
 - Unity Version 2021.3 or higher
-- [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core) - v6.3.2+
-- [glTFast](https://github.com/atteneder/glTFast) - v5.0.0+ (included as dependency in Ready Player Me Core)
-- [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git#dev) v5.1.0+
+- [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core.git) - v6.3.2+
+- [glTFast](https://github.com/atteneder/glTFast.git) - v5.0.0+ (included as dependency in Ready Player Me Core)
+- [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git) v5.1.0+
 - Before testing in VR you should Fix any issues diagnosed by the Meta Project Setup Tool by clicking on `Edit` -> ` > Project Settings` -> `Meta XR`
 
-## Installation
+## Package Installation
+***This assumes that your projects already meets all the requirements including the installation of all the plugins listed above***
 - Copy the following GitHub URL: 
 ```cs 
 https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
@@ -82,3 +83,12 @@ To do this follow these steps:
    - A `OVRFaceExpressions` component added to the root object
    - `ARKitFace` component added to each child mesh with blendshapes
    - A `TwistHierarchy` component added to the root object with the twist bones set up already
+
+### Step 4: Saving as a prefab
+With the configured avatar in the scene there are still a few steps required to save it as a re-usable prefab.
+1. Right click on the avatar GameObject in the hierarchy and select 'Prefab -> Select Asset'. _This will show the avatar source files including a .glb and a .prefab file_
+2. Move the files from this folder somewhere in your Assets folder (or anywhere outside of `Assets/Ready Player Me/Avatars` folder)
+3. After moving these files you can now simply select the avatar object still in the scene and drag it anywhere into project view to create a prefab
+
+After creating the prefab you can now add it into any scene by dragging and dropping the prefab into the scene hierarchy.
+

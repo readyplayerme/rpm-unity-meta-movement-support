@@ -23,11 +23,17 @@ Please visit the online documentation and join our public `forums` community.
 https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
 ```
 - Open Unity and go to `Window -> Package Manager -> Add package from git URL`
+  ![Screenshot 2024-07-22 081415](https://github.com/user-attachments/assets/406677e8-98af-41f2-a9ad-4385032f6bae)
+
 - Paste the URL and click `Add`
+![Screenshot 2024-07-22 081437](https://github.com/user-attachments/assets/d725e8d0-1d23-49fa-a590-4ac84b878bf9)
 
 ## Importing the Sample
 1. Import the sample by going to `Window -> Package Manager -> Ready Player Me Meta Movement Support -> Samples -> Import`
+![Screenshot 2024-07-22 082241](https://github.com/user-attachments/assets/96e8b2fd-12f3-4b99-95b6-3548845593cd)
+
 2. Open the scene `Assets/Samples/MetaMovement/RetargetingSample/Scenes/RetargetingSample.unity`
+![Screenshot 2024-07-22 082310](https://github.com/user-attachments/assets/2368812f-1066-45c2-96dc-e95b1d2b7b1f)
 
 ### Running the Samples in the Editor
 1. Open the scene `Assets/Samples/MetaMovement/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/MetaMovement/LoaderSamples/Scenes/PrefabLoader`

@@ -11,7 +11,7 @@ Please visit the online documentation and join our public `forums` community.
 
 ## Requirements
 - Unity Version 2021.3 or higher
-- [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core.git) - v6.3.2+
+- [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core.git) - v7.1.0+
 - [glTFast](https://github.com/atteneder/glTFast.git) - v5.0.0+ (included as a dependency in Ready Player Me Core)
 - [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git) v5.1.0+
 - Before testing in VR you should Fix any issues diagnosed by the Meta Project Setup Tool by clicking on `Edit` -> ` > Project Settings` -> `Meta XR`
@@ -25,28 +25,27 @@ https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
 ```
 - Open Unity and go to `Window -> Package Manager -> Add package from git URL`
   
-  ![Screenshot 2024-07-22 081415](https://github.com/user-attachments/assets/406677e8-98af-41f2-a9ad-4385032f6bae)
+  ![Screenshot 2024-07-22 081415](~Images/image-package-manager-0.png)
 
 - Paste the URL and click `Add`
   
-![Screenshot 2024-07-22 081437](https://github.com/user-attachments/assets/d725e8d0-1d23-49fa-a590-4ac84b878bf9)
+![Screenshot 2024-07-22 081437](~Images/image-package-manager-1.png)
 
 ## Importing the Sample
 1. Import the sample by going to `Window -> Package Manager -> Ready Player Me Meta Movement Support -> Samples -> Import`
    
-![Screenshot 2024-07-22 082241](https://github.com/user-attachments/assets/96e8b2fd-12f3-4b99-95b6-3548845593cd)
-
-2. Open the scene `Assets/Samples/MetaMovement/RetargetingSample/Scenes/RetargetingSample.unity`
-   
-![Screenshot 2024-07-22 082310](https://github.com/user-attachments/assets/2368812f-1066-45c2-96dc-e95b1d2b7b1f)
+![Screenshot 2024-07-22 082241](~Images/image-package-manager.png)
 
 ### Running the Samples in the Editor
-1. Open the scene `Assets/Samples/MetaMovement/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/MetaMovement/LoaderSamples/Scenes/PrefabLoader`
+1. Open the scene `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/PrefabLoader`
 2. Connect your Quest device via Quest Link
 3. Click on the `Play` button in the Unity Editor
 
+
+   ![Screenshot 2024-07-22 082310](~Images/image-scenes.png)
+
 ### Running the Samples on the device
-1. Open the scene `Assets/Samples/MetaMovement/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/MetaMovement/LoaderSamples/Scenes/PrefabLoader`
+1. Open the scene `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/PrefabLoader`
 2. Add the sample scene to the build settings by going to `File -> Build Settings -> Add Open Scenes`
 3. Set the build target to Android
 4. Connect your Quest device via USB
@@ -56,19 +55,19 @@ https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
 _This assumes that the scene is already set up with the necessary components for OVR tracking and Meta Movement_
 
 ### Dynamic Avatar Loading
-1. With your scene open, drag and drop the `DynamicAvatarLoader` prefab from `Assets/Ready Player Me/MetaMovement/Prefabs` into your scene
+1. With your scene open, drag and drop the `DynamicAvatarLoader` prefab from `Packages/Ready Player Me Meta Movement Support/Runtime/Prefabs` into your scene
 3. Select the `DynamicAvatarLoader` object in the scene, then in the inspector, set the `Avatar URL` field in the `LoadUrlOnStart` component to the URL of the avatar you want to load
 
-   ![Screenshot 2024-07-22 105848](https://github.com/user-attachments/assets/9cb15bd7-d37c-49d0-97ef-4b29150fef16)
+   ![Screenshot 2024-07-22 105848](~Images/image-inspector.png)
 
 4. Click on the `Play` button in the Unity Editor
 5. After a small delay, your avatar will load into the scene
 
 ### Loading with AvatarPrefabLoader 
-1. With your scene open, Drag and drop the `AvatarPrefabLoader` prefab from `Assets/Ready Player Me/MetaMovement/Prefabs` into your scene
+1. With your scene open, Drag and drop the `AvatarPrefabLoader` prefab from `Packages/Ready Player Me Meta Movement Support/Runtime/Prefabs` into your scene
 2. Select the `AvatarPrefabLoader` object in the scene, then in the inspector, set the `Avatar URL` field in the `LoadUrlOnStart` component to the URL of the avatar you want to load
 
-![Screenshot 2024-07-22 105856](https://github.com/user-attachments/assets/8ce1be70-020a-4908-8cb2-24a6c2cb8b48)
+![Screenshot 2024-07-22 105856](~Images/image-inspector-2.png)
 
 3. Click on the `Play` button in the Unity Editor
 4. After a small delay, your avatar will load into the scene
@@ -79,11 +78,11 @@ Before loading an avatar you need to set the correct avatar config.
 To do this follow these steps:
 1. Open the Ready Player Me Settings window  `Tools -> Ready Player Me -> Settings` 
 
-![Screenshot 2024-07-22 083005](https://github.com/user-attachments/assets/1dd8baec-ff3b-4566-97a0-eba2d93ab668)
+![Screenshot 2024-07-22 083005](~Images/image-toolbar.png)
 
 2. Set the `Avatar Config` field to `Meta Avatar Config`
 
-![Screenshot 2024-07-22 083024](https://github.com/user-attachments/assets/5a5efbbe-177f-42a8-8c8a-54df0fe1e985)
+![Screenshot 2024-07-22 083024](~Images/image-settings.png)
 
 3. This will ensure that the avatar is created with the correct settings for Meta Movement and face-tracking
 
@@ -92,7 +91,7 @@ To do this follow these steps:
 2. After avatar creation is complete you will get a URL to a .glb, copy that URL.
 3. In Unity open the Avatar loader window by going to `Tools -> Ready Player Me -> Avatar Loader`
 
-![Screenshot 2024-07-22 083154](https://github.com/user-attachments/assets/31beabd4-2e32-4ae7-88cb-ed54a3c5b14a)
+![Screenshot 2024-07-22 083154](~Images/image-loader.png)
 
 4. Paste the URL into the `Avatar URL` field and click `Load Avatar`
 5. After a small delay, the avatar should load into the scene as a new GameObject
@@ -101,7 +100,7 @@ To do this follow these steps:
 1. Select the avatar GameObject and right-click to display the context menu
 2. In the context menu, select `Ready Player Me -> Meta Movement -> Run Avatar Setup`
 
-![Screenshot 2024-07-22 083334](https://github.com/user-attachments/assets/b982caa4-8bb4-49cc-a5f7-6191cf0d9807)
+![Screenshot 2024-07-22 083334](~Images/image-inspector-2.png)
 
 3. This should automatically set up the avatar with the correct settings and components including:
    - Adding a Retargeting Layer component

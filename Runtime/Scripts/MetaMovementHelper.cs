@@ -29,6 +29,12 @@ namespace ReadyPlayerMe.MetaMovement
         /// <param name="restPoseObjectHumanoid">The rest pose object to use for retargeting.</param>
         public static void RuntimeRetargetingSetup(GameObject avatar, RestPoseObjectHumanoid restPoseObjectHumanoid)
         {
+            var animator = avatar.GetComponent<Animator>();
+            if(animator != null)
+            {
+                AnimationUtilities.UpdateToAnimatorPose(animator);
+            }
+            
             AddComponentsRuntime.SetupCharacterForAnimationRiggingRetargeting(avatar.gameObject,
                 true, true, restPoseObjectHumanoid);
             var deformation = avatar.GetComponentInChildren<FullBodyDeformationConstraint>();

@@ -21,7 +21,13 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             if (activeGameObject != null)
             {
                 var animator = activeGameObject.GetComponent<Animator>();
+                if(animator == null)
+                {
+                    Debug.LogWarning("No Animator component found on the selected GameObject. Please add an Animator component to the GameObject.");
+                    return;
+                }
                 var restPoseObjectHumanoid = AddComponentsHelper.GetRestPoseObject(AddComponentsHelper.CheckIfTPose(animator));
+                AnimationUtilities.UpdateToAnimatorPose(animator);
                 HelperMenusBody.SetupCharacterForAnimationRiggingRetargetingConstraints(activeGameObject, restPoseObjectHumanoid, true, true);
                 MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
                 SetupFaceTracking(activeGameObject);

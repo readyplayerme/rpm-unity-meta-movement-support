@@ -1,0 +1,19 @@
+{
+    "name": "ReadyPlayerMe.MetaMovement",
+    "rootNamespace": "",
+    "references": [
+        "ReadyPlayerMe.Core",
+        "Meta.Movement",
+        "Oculus.VR",
+        "Unity.Animation.Rigging"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -2,7 +2,6 @@ using Oculus.Movement.AnimationRigging;
 using Oculus.Movement.Tracking;
 using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
-using ReadyPlayerMe.MetaMovement.Runtime;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -15,16 +14,21 @@ namespace ReadyPlayerMe.MetaMovement.Editor
         private const string META_CHARACTER_LAYER = "Character";
 
         [MenuItem(META_SETUP_MENU_FUNCTION)]
-        private static void MetaMovementSetup()
+        public static void MetaMovementSetup()
         {
             var activeGameObject = Selection.activeGameObject;
 
             if (activeGameObject != null)
             {
                 var animator = activeGameObject.GetComponent<Animator>();
+                if(animator == null)
+                {
+                    Debug.LogWarning("No Animator component found on the selected GameObject. Please add an Animator component to the GameObject.");
+                    return;
+                }
                 var restPoseObjectHumanoid = AddComponentsHelper.GetRestPoseObject(AddComponentsHelper.CheckIfTPose(animator));
+                AnimationUtilities.UpdateToAnimatorPose(animator);
                 HelperMenusBody.SetupCharacterForAnimationRiggingRetargetingConstraints(activeGameObject, restPoseObjectHumanoid, true, true);
-                //TODO Add Retargeting Layer setup once meta makes it publicly accessible
                 MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
                 SetupFaceTracking(activeGameObject);
                 MetaMovementHelper.SetupHierarchyTwist(activeGameObject);
@@ -37,6 +41,12 @@ namespace ReadyPlayerMe.MetaMovement.Editor
             {
                 Debug.LogWarning("No GameObject selected. Please select a GameObject to add components to.");
             }
+        }
+        
+        [MenuItem(META_SETUP_MENU_FUNCTION, true)]
+        private static bool ValidateMetaMovementSetup()
+        {
+            return Selection.activeGameObject != null;
         }
 
         private static void SetupFaceTracking(GameObject activeGameObject)

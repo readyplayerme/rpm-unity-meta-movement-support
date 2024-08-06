@@ -17,4 +17,4 @@ MonoBehaviour:
   _correctPositionsLateUpdate: 1
   _shoulderCorrectionWeightLateUpdate: 0
   _fingerPositionCorrectionWeight: 0
-  _regenJobData: 1
+  _regenJobData: 0

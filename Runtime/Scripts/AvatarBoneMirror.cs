@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using ReadyPlayerMe.Core;
 using UnityEngine;
 
-namespace ReadyPlayerMe.MetaMovement.Runtime
+namespace ReadyPlayerMe.MetaMovement
 {
+    /// <summary>
+    /// Manages the mirroring of bones for an avatar, allowing for synchronized movement between source and mirrored bones.
+    /// </summary>
     public class AvatarBoneMirror : MonoBehaviour
     {
         [System.Serializable]
@@ -26,24 +29,32 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
         {
             if (avatarToMirror == null)
             {
-                gameObject.SetActive(false);
+                gameObject.SetActive(false); // Disable the object if no avatar is set.
             }
         }
 
+        /// <summary>
+        /// Sets the avatar to mirror and activates the GameObject.
+        /// </summary>
+        /// <param name="avatar">The GameObject representing the avatar to be mirrored.</param>
         public void SetAvatarToMirror(GameObject avatar)
         {
             avatarToMirror = avatar.transform;
             SetMirroredBonePair();
-            gameObject.SetActive(true);
+            gameObject.SetActive(true); // Reactivate the GameObject with the new avatar.
         }
 
+        /// <summary>
+        /// Creates a copy of the avatar, transfers its mesh, updates face tracking meshes, and sets the avatar to mirror.
+        /// </summary>
+        /// <param name="avatar">The GameObject representing the avatar to be mirrored.</param>
         public void TransferMeshAndSetAvatarToMirror(GameObject avatar)
         {
             var avatarCopy = Instantiate(avatar, transform);
             AvatarMeshHelper.TransferMesh(avatarCopy, gameObject);
             MetaMovementHelper.UpdateFaceTrackingMeshes(gameObject);
             SetAvatarToMirror(avatar);
-            Destroy(avatarCopy);
+            Destroy(avatarCopy); // Clean up the temporary avatar copy.
         }
         
         private void LateUpdate()
@@ -52,8 +63,11 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
             {
                 return;
             }
+            // Update this GameObject's transform to match the avatar's.
             transform.localPosition = avatarToMirror.localPosition;
             transform.localRotation = avatarToMirror.localRotation;
+            
+            // Mirror the bone positions and rotations.
             foreach (var transformPair in mirroredBonePairs)
             {
                 transformPair.MirroredBone.localPosition = transformPair.SourceBone.localPosition;
@@ -61,6 +75,9 @@ namespace ReadyPlayerMe.MetaMovement.Runtime
             }
         }
         
+        /// <summary>
+        /// Sets up the mirrored bone pairs by matching the source avatar's bones to corresponding bones in the mirrored object.
+        /// </summary>
         public void SetMirroredBonePair()
         {
             if(avatarToMirror == null)

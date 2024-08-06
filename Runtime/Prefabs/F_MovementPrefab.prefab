@@ -2342,7 +2342,7 @@ MonoBehaviour:
     BoneIdOverrideValue: 71
   - Joint: 11
     PositionChange: {x: 0, y: 0, z: 0}
-    RotationChange: {x: 0, y: 0, z: 0, w: 1}
+    RotationChange: {x: 0, y: 0, z: 0.13052632, w: -0.9914448}
     RotationTweaks:
     - {x: 0.0492341, y: -0.0021937832, z: 0.022181375, w: 0.9985385}
     DisableRotationTransform: 0
@@ -2351,7 +2351,7 @@ MonoBehaviour:
     BoneIdOverrideValue: 71
   - Joint: 12
     PositionChange: {x: 0, y: 0, z: 0}
-    RotationChange: {x: 0, y: 0, z: 0, w: 1}
+    RotationChange: {x: 0, y: 0, z: 0.1305262, w: 0.9914449}
     RotationTweaks:
     - {x: 0.04923429, y: 0.0021942682, z: -0.022186182, w: 0.9985384}
     DisableRotationTransform: 0
@@ -4826,7 +4826,7 @@ MonoBehaviour:
     _shouldersHeightReductionWeight: 0
     _shouldersWidthReductionWeight: 0
     _affectArmsBySpineCorrection: 0
-    _shoulderRollWeight: 1
+    _shoulderRollWeight: 0.5
     _leftShoulderWeight: 1
     _rightShoulderWeight: 1
     _leftArmWeight: 1
@@ -4841,6 +4841,7 @@ MonoBehaviour:
     _rightToesWeight: 1
     _alignFeetWeight: 0.75
     _originalSpinePositionsWeight: 0.75
+    _armLengthMultiplier: 0
     _originalSpineBoneCount: 5
     _originalSpineUseHipsToHeadToScale: 1
     _originalSpineFixRotations: 1

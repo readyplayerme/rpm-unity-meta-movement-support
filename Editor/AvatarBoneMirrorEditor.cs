@@ -1,4 +1,4 @@
-using ReadyPlayerMe.MetaMovement.Runtime;
+using ReadyPlayerMe.MetaMovement;
 using UnityEditor;
 using UnityEngine;
 

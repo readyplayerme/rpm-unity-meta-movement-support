@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   spawnOffset: {x: 0, y: 0, z: 0}
-  restTPoseObject_M: {fileID: 11400000, guid: 1908bd4d2ee1e1a4ab87e0877b337f3a, type: 2}
+  restTPoseObject_M: {fileID: 11400000, guid: 179f0ba64e771944a95647dea9da75b9, type: 2}
   restTPoseObject_F: {fileID: 11400000, guid: ea324f64e8bb2fb4ba3f85bc2f611f05, type: 2}
   avatarConfig: {fileID: 11400000, guid: 7b5679ec033af4047870d3ade6d4e8ae, type: 2}
-  avatarOverride: {fileID: 0}
+  animationAvatarOverride: {fileID: 0}
   OnAvatarObjectLoaded:
     m_PersistentCalls:
       m_Calls: []

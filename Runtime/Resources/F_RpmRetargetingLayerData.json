@@ -1,0 +1,509 @@
+{
+    "_skeletonType": 3,
+    "_updateRootPose": false,
+    "_updateRootScale": false,
+    "_enablePhysicsCapsules": false,
+    "_applyBoneTranslations": true,
+    "_adjustments": [
+        {
+            "Joint": 0,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "RotationTweaks": [
+                {
+                    "x": 0.460244745016098,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.8877920508384705
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        },
+        {
+            "Joint": 7,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "RotationTweaks": [
+                {
+                    "x": 0.09686555713415146,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": -0.9952974915504456
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        },
+        {
+            "Joint": 8,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "RotationTweaks": [
+                {
+                    "x": 0.03789062798023224,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.9992818832397461
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        },
+        {
+            "Joint": 54,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "RotationTweaks": [
+                {
+                    "x": -0.06021807715296745,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.9981852769851685
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        },
+        {
+            "Joint": 11,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.1305263191461563,
+                "w": -0.9914448261260986
+            },
+            "RotationTweaks": [
+                {
+                    "x": 0.04923409968614578,
+                    "y": -0.002193783177062869,
+                    "z": 0.022181374952197076,
+                    "w": 0.9985384941101074
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        },
+        {
+            "Joint": 12,
+            "PositionChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "RotationChange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.13052619993686677,
+                "w": 0.9914448857307434
+            },
+            "RotationTweaks": [
+                {
+                    "x": 0.049234289675951007,
+                    "y": 0.0021942681632936,
+                    "z": -0.02218618243932724,
+                    "w": 0.9985383749008179
+                }
+            ],
+            "DisableRotationTransform": false,
+            "DisablePositionTransform": false,
+            "FullBodyBoneIdOverrideValue": 85,
+            "BoneIdOverrideValue": 71
+        }
+    ],
+    "_fullBodySectionsToAlign": [
+        4,
+        6,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3
+    ],
+    "_bodySectionsToAlign": [
+        4,
+        6,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "_fullBodySectionToPosition": [
+        4,
+        6,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3
+    ],
+    "_bodySectionToPosition": [
+        4,
+        6,
+        5,
+        7,
+        8,
+        10,
+        11
+    ],
+    "_updateType": 1,
+    "_applyAnimationConstraintsToCorrectedPositions": true,
+    "_enableTrackingByProxy": true,
+    "_retargetingAnimationConstraint": {
+        "instanceID": -20268
+    },
+    "_retargetingProcessors": [
+        {
+            "instanceID": 36434
+        },
+        {
+            "instanceID": 36436
+        }
+    ],
+    "_retargetingAnimationRig": {
+        "_rebindAnimator": true,
+        "_reEnableRig": true,
+        "_rigToggleOnFocus": false,
+        "_rigBuilder": {
+            "instanceID": -19826
+        },
+        "_ovrSkeletonConstraints": [
+            {
+                "instanceID": -20268
+            }
+        ]
+    },
+    "_externalBoneTargets": {
+        "_boneTargets": [
+            {
+                "HumanBodyBone": 0,
+                "Target": {
+                    "instanceID": -20278
+                }
+            },
+            {
+                "HumanBodyBone": 7,
+                "Target": {
+                    "instanceID": -20282
+                }
+            },
+            {
+                "HumanBodyBone": 8,
+                "Target": {
+                    "instanceID": -20286
+                }
+            },
+            {
+                "HumanBodyBone": 54,
+                "Target": {
+                    "instanceID": -20290
+                }
+            },
+            {
+                "HumanBodyBone": 9,
+                "Target": {
+                    "instanceID": -20294
+                }
+            },
+            {
+                "HumanBodyBone": 10,
+                "Target": {
+                    "instanceID": -20298
+                }
+            },
+            {
+                "HumanBodyBone": 5,
+                "Target": {
+                    "instanceID": -20302
+                }
+            },
+            {
+                "HumanBodyBone": 19,
+                "Target": {
+                    "instanceID": -20306
+                }
+            },
+            {
+                "HumanBodyBone": 6,
+                "Target": {
+                    "instanceID": -20310
+                }
+            },
+            {
+                "HumanBodyBone": 20,
+                "Target": {
+                    "instanceID": -20314
+                }
+            }
+        ],
+        "_fullBody": true,
+        "_enabled": true
+    },
+    "_retargetedBoneMappings": {
+        "_humanBodyBonePairs": [
+            7,
+            3,
+            4,
+            5,
+            6,
+            19,
+            20,
+            8,
+            54,
+            10,
+            10,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            30,
+            45,
+            19,
+            20,
+            21,
+            22,
+            23,
+            25,
+            26,
+            26,
+            28,
+            29,
+            29,
+            31,
+            32,
+            32,
+            34,
+            35,
+            35,
+            37,
+            38,
+            38,
+            40,
+            41,
+            41,
+            43,
+            44,
+            44,
+            46,
+            47,
+            47,
+            49,
+            50,
+            50,
+            52,
+            53,
+            53,
+            9
+        ],
+        "_humanBodyBoneToBoneId": [
+            1,
+            70,
+            77,
+            71,
+            78,
+            73,
+            80,
+            2,
+            3,
+            6,
+            7,
+            8,
+            13,
+            10,
+            15,
+            11,
+            16,
+            19,
+            45,
+            76,
+            83,
+            86,
+            86,
+            86,
+            20,
+            21,
+            22,
+            25,
+            26,
+            27,
+            30,
+            31,
+            32,
+            35,
+            36,
+            37,
+            40,
+            41,
+            42,
+            46,
+            47,
+            48,
+            51,
+            52,
+            53,
+            56,
+            57,
+            58,
+            61,
+            62,
+            63,
+            66,
+            67,
+            68,
+            5
+        ],
+        "_boneIdToBonePairs": [
+            86,
+            86,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7,
+            10,
+            86,
+            11,
+            19,
+            86,
+            15,
+            86,
+            16,
+            45,
+            86,
+            86,
+            30,
+            21,
+            22,
+            23,
+            86,
+            25,
+            26,
+            27,
+            28,
+            86,
+            30,
+            31,
+            32,
+            33,
+            86,
+            35,
+            36,
+            37,
+            38,
+            86,
+            40,
+            41,
+            42,
+            43,
+            86,
+            86,
+            56,
+            47,
+            48,
+            49,
+            86,
+            51,
+            52,
+            53,
+            54,
+            86,
+            56,
+            57,
+            58,
+            59,
+            86,
+            61,
+            62,
+            63,
+            64,
+            86,
+            66,
+            67,
+            68,
+            69,
+            86,
+            71,
+            73,
+            86,
+            76,
+            86,
+            86,
+            76,
+            78,
+            80,
+            86,
+            83,
+            86,
+            86,
+            83
+        ]
+    },
+    "_updateBoneMappingsData": false
+}

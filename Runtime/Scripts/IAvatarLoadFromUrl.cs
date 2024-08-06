@@ -1,9 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnityEngine;
 
-public interface IAvatarLoadFromUrl 
+namespace ReadyPlayerMe.MetaMovement
 {
-    public void LoadAvatar(string url);
+    /// <summary>
+    /// Interface defining the method required to load an avatar from a URL.
+    /// </summary>
+    public interface IAvatarLoadFromUrl
+    {
+        /// <summary>
+        /// Loads an avatar from the specified URL.
+        /// </summary>
+        /// <param name="url">The URL from which to load the avatar.</param>
+        public void LoadAvatar(string url);
+    }
 }

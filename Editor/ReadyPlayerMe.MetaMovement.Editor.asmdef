@@ -1,0 +1,21 @@
+{
+    "name": "ReadyPlayerMe.MetaMovement.Editor",
+    "rootNamespace": "",
+    "references": [
+        "ReadyPlayerMe.MetaMovement",
+        "ReadyPlayerMe.Core",
+        "Meta.Movement",
+        "Oculus.VR"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

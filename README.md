@@ -42,7 +42,8 @@ https://github.com/readyplayerme/rpm-unity-meta-movement-support.git
 2. Connect your Quest device via Quest Link
 3. Click on the `Play` button in the Unity Editor
 
-   ![image-scenes](https://github.com/user-attachments/assets/b24c19a7-aaf9-4a95-924b-8131b215011a)
+  ![image](https://github.com/user-attachments/assets/47d4d0ba-d8f1-457b-bae3-34b738184f5d)
+
 
 ### Running the Samples on the device
 1. Open the scene `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/DynamicLoader` or `Assets/Samples/Ready Player Me Meta Movement Support/VERSION_NUMBER/LoaderSamples/Scenes/PrefabLoader`

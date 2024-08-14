@@ -1,6 +1,6 @@
 {
   "name": "com.readyplayerme.metamovement",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Ready Player Me Meta Movement Support",
   "description": "This package provides support for Ready Player Me avatars that use Meta Movement SDK.",
   "unity": "2021.3",
@@ -13,7 +13,8 @@
   "keywords": [
     "meta",
     "avatar",
-    "vr"
+    "vr",
+    "xr"
   ],
   "author": {
     "name": "Ready Player Me",

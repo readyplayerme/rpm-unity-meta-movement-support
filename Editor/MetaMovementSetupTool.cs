@@ -78,7 +78,6 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                 {
                     arkitFaceComponent = mesh.gameObject.AddComponent<ARKitFace>();
                 }
-                arkitFaceComponent.OnBeforeSerialize();
                 MetaMovementHelper.ApplyARKitFaceSettings(arkitFaceComponent);
                 EditorUtility.SetDirty(arkitFaceComponent);
             }

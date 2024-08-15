@@ -29,7 +29,11 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                 var restPoseObjectHumanoid = AddComponentsHelper.GetRestPoseObject(AddComponentsHelper.CheckIfTPose(animator));
                 AnimationUtilities.UpdateToAnimatorPose(animator);
                 HelperMenusBody.SetupCharacterForAnimationRiggingRetargetingConstraints(activeGameObject, restPoseObjectHumanoid, true, true);
-                MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
+                if(LayerMask.NameToLayer(META_CHARACTER_LAYER) >= 0)
+                {
+                    MetaMovementHelper.SetLayerRecursively(activeGameObject, LayerMask.NameToLayer(META_CHARACTER_LAYER));
+                    return;
+                }
                 SetupFaceTracking(activeGameObject);
                 MetaMovementHelper.SetupHierarchyTwist(activeGameObject);
                 var deformation = activeGameObject.GetComponentInChildren<FullBodyDeformationConstraint>();
@@ -74,7 +78,6 @@ namespace ReadyPlayerMe.MetaMovement.Editor
                 {
                     arkitFaceComponent = mesh.gameObject.AddComponent<ARKitFace>();
                 }
-                arkitFaceComponent.OnBeforeSerialize();
                 MetaMovementHelper.ApplyARKitFaceSettings(arkitFaceComponent);
                 EditorUtility.SetDirty(arkitFaceComponent);
             }

@@ -137,7 +137,7 @@ namespace ReadyPlayerMe.MetaMovement
                 Debug.LogError("ARKitFace component is null.");
                 return;
             }
-
+            arKitFace.RetargetingTypeField = OVRCustomFace.RetargetingType.Custom;
             arKitFace.AutoMapBlendshapes();
             arKitFace.BlendShapeStrengthMultiplier = 1f;
 

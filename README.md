@@ -12,8 +12,8 @@ Please visit the online documentation and join our public `forums` community.
 ## Requirements
 - Unity Version 2021.3 or higher
 - [Ready Player Me Core](https://github.com/readyplayerme/rpm-unity-sdk-core.git) - v7.1.0+
-- [glTFast](https://github.com/atteneder/glTFast.git) - v5.0.0+ (included as a dependency in Ready Player Me Core)
-- [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git) v5.1.0+
+- [glTFast](https://github.com/atteneder/glTFast.git) - v6.0.0+ (included as a dependency in Ready Player Me Core)
+- [Meta Movement](https://github.com/oculus-samples/Unity-Movement.git) v5.2.0+
 - Before testing in VR you should Fix any issues diagnosed by the Meta Project Setup Tool by clicking on `Edit` -> ` > Project Settings` -> `Meta XR`
 
 ## Package Installation

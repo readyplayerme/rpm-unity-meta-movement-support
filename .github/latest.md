@@ -1,7 +1,6 @@
 
 ## Changelog
 
-- ### Updates
+- ### Added
 
-- README updates
-- fixed issue causing error with ARKitFace setup
+- added package dependencies to manifest

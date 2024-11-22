@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Oculus.Movement.AnimationRigging;
-using Oculus.Movement.Tracking;
+using Oculus.Movement.Tracking.Deprecated;
 using Oculus.Movement.Utils;
 using ReadyPlayerMe.Core;
 using UnityEditor;

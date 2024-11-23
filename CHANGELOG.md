@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.0] - 2024.11.22
+
+### Updates
+
+- Updated Movement SDK to v 71.0.0
+- fixed errors cause by API changes
+
 ## [0.1.2] - 2024.09.02
 
 - ### Added

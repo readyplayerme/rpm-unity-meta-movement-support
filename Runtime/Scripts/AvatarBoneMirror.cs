@@ -96,8 +96,18 @@ namespace ReadyPlayerMe.MetaMovement
 
             foreach (var childTransform in childTransforms)
             {
-                var mirroredTransform =
-                    gameObject.transform.FindChildRecursive(childTransform.name);
+                Transform mirroredTransform = null;
+
+                if(childTransform.name == "Armature"){
+                    mirroredTransform =
+                        gameObject.transform.FindChildRecursive(childTransform.name); 
+                }
+
+                else{
+                    mirroredTransform =
+                        gameObject.transform.Find("Armature").transform.FindChildRecursive(childTransform.name);
+                }
+
                 if (mirroredTransform != null)
                 {
                     bonePairList.Add(new MirroredBonePair
